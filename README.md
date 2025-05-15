@@ -8,9 +8,13 @@ json序列化和反序列化，muduo网络库开发，sql，数据库编程，cm
 二、编译方式
 
 运行脚本autobuild.sh:
+
 cd build
+
 rm -rf *
+
 cmake ..
+
 make
 
 三、项目相关细节
@@ -72,7 +76,6 @@ void TcpServer::start() {
     }
     
 }
-
 
 7.TcpConnection::shutdown函数：
 
