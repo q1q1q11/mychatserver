@@ -26,6 +26,7 @@ onConnection与onMessage方法专门负责处理用户连接创建和断开，�
 setThreadNum=4(1个I/O线程（main reactor）负责新用户的连接 3个worker线程（sub reactor）负责已连接用户的读写事件)——muduo库会自己分配。
 5.thirdparty:第三方库，这里是json.hpp
 6.TcpServer::start函数作用：
+/*
 void TcpServer::start() {
     // 1. 检查线程池是否已启动
     if (!started_.exchange(true)) {
@@ -39,6 +40,7 @@ void TcpServer::start() {
         });
     }
 }
+*/
 7.TcpConnection::shutdown函数：
 函数	行为	适用场景
 shutdown()	优雅关闭写端，等待输出缓冲区数据发送完毕，对端仍可发送数据。	需要半关闭（如 HTTP Keep-Alive）
